@@ -1,0 +1,24 @@
+<input type="text" [(ngModel)]="Guardar">{{Guardar}}
+
+<table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Velocidad</th>
+            <th scope="col">Patente</th>
+          </tr>
+        </thead>
+            <tbody>
+            <tr *ngFor="let autos of autosd">
+                <th scope="row">{{autos.id}}</th>
+                <td>{{autos.fecha}}</td>
+                <td>{{autos.modelo}}</td>
+                <td class="" [ngClass]="colorearFila(autos.velocidad)">{{autos.velocidad}}</td>
+                <td>{{autos.patente}}</td>
+
+            </tr>
+            </tbody>
+      </table>
+    
